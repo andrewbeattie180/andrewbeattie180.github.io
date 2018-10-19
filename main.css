@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.intro {
+
+
+}
+header{
+    height:150px;
+    padding-top: 20px;
+    padding-bottom:30px;
+    background-image: url(https://images.pexels.com/photos/924002/pexels-photo-924002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: 100% auto, 50% auto, auto, cover;
+    border-top: solid 10px darkgrey;
+    text-align: center;
+}
+h1{
+    display: block;
+    font-size: 3.2em;
+    font-family: "Righteous", sans-serif;
+    text-transform: capitalize;
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+h1::before{
+    display: inline-block;
+    position: relative;
+    content:" ";
+    width:90px;
+    height: 100%;
+    margin: -20px 20px 0 0;
+    background-image: url("img/cuphead-png-5.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+h1, h2{
+    margin:0;
+    padding: 0 10%;
+}
+
+h2{
+    display: block;
+    padding-bottom: 35px;
+    border-top: none;
+    color: lightslategray;
+    font-size: 1.5em;
+    font-style:italic;
+}
+h2::after{
+    display: inline-block;
+    content:" ";
+    height:100%;
+    background-image: url(https://wearecodenation.com/wp-content/uploads/2018/02/Code-Nation-Short-White.png);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
