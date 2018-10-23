@@ -3,23 +3,24 @@
 *{
     box-sizing: border-box;
 }
-html, body{
-    height: 100%;
+body{
+    height:100vh;
     width: 100%;
     overflow: hidden;
     margin: 0;
 }
-.intro {
 
-
-}
 header{
-    height:180px;
+    height:25%;
     padding-top: 20px;
     padding-bottom:30px;
-    background-image: url(https://images.pexels.com/photos/924002/pexels-photo-924002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background:#fff 50% 0 url(img/pexels-photo-240163.jpeg);
     background-size: 100% auto, 50% auto, auto, cover;
+    background-attachment: fixed, fixed, fixed, fixed;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
     border-top: solid 10px darkgrey;
+    border-bottom: solid 10px darkgrey;
     text-align: center;
 }
 h1{
@@ -33,11 +34,11 @@ h1{
 h1::before{
     display: inline-block;
     position: relative;
-    top:20px;
+    top:-20%;
     content:" ";
-    width:45px;
-    height: 60px;
-    margin: -20px 20px 0 0;
+    width: 40px;
+    height: 51px;
+    margin:0;
     background-image: url("img/cuphead-png-5.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -45,6 +46,7 @@ h1::before{
 }
 h1, h2{
     margin:0;
+    opacity: 1;
     padding: 0 10%;
     font-weight: normal;
 }
@@ -53,7 +55,7 @@ h2{
     display: block;
     padding-bottom: 35px;
     border-top: none;
-    color: lightslategray;
+    color: darkblue;
     font-size: 1.5em;
     font-style:italic;
 }
@@ -67,4 +69,110 @@ h2::after{
     background-image: url(https://wearecodenation.com/wp-content/uploads/2018/02/Code-Nation-Short-White.png);
     background-repeat: no-repeat;
     background-size:100%;
+}
+
+.section{
+    height: 65%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.section a{
+    font-size:3em;
+    font-weight: 200;
+    margin: 10px 10px;
+    padding: 20px 10px;
+    line-height: 0;
+}
+.icons{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icons ul{
+    width:75%;
+    list-style: none;
+    margin:0;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    flex-wrap:wrap;
+    cursor: pointer;
+}
+.work{
+    width: 50%;
+    content: " ";
+
+}
+.footer{
+    border-top: solid 10px darkgrey;
+    border-bottom: solid 10px darkgrey;
+    height: 10%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background:#fff 50% 0 url(img/pexels-photo-240163.jpeg);
+    background-size: 100% auto, 50% auto, auto, cover;
+    background-attachment: fixed, fixed, fixed, fixed;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-position: bottom;
+}
+.social ul{
+    position: relative;
+    list-style: none;
+    margin:0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+    cursor: pointer;
+}
+
+.social a{
+    color: #ffffff;
+    width:25%;
+    background: rgba(0, 0,0,0.5);
+    border:2px solid black;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 10px 10px;
+    padding: 5px 40px;
+    line-height: 0; 
+    text-align:center;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width:600px){
+    h1{
+        font-size:2.5em;
+    }
+    h1::before{
+        width:0;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+}
+    
+
+@media only screen and (max-width: 365px){
+    header{
+        background-size: 250%;
+        background-position: top;
+    }
+    h1{
+        font-size:1.2em;
+    }
+
+    h2{
+        font-size:0.8em;
+    }
+    h2::after{
+        width:50px;
+        height:16px;
+    }
 }
