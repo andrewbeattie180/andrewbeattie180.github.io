@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    height:100vh;
-    width: 100%;
-    overflow: hidden;
     margin: 0;
 }
 
@@ -44,7 +41,7 @@ h1::before{
     background-size: 100%;
     
 }
-h1, h2{
+h1, h2, h3{
     margin:0;
     opacity: 1;
     padding: 0 10%;
@@ -53,7 +50,7 @@ h1, h2{
 
 h2{
     display: block;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     border-top: none;
     color: darkblue;
     font-size: 1.5em;
@@ -73,43 +70,52 @@ h2::after{
 
 .section{
     height: 65%;
-    display:flex;
-    flex-wrap: wrap;
-}
-.section a{
-    font-size:3em;
-    font-weight: 200;
-    margin: 10px 10px;
-    padding: 20px 10px;
-    line-height: 0;
-}
-.icons{
-    height:100%;
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.icons ul{
-    width:75%;
-    list-style: none;
-    margin:0;
-    padding:20px;
-    display: flex;
-    justify-content: center;
-    align-content:center;
-    flex-wrap:wrap;
-    cursor: pointer;
-}
-.work{
-    width: 50%;
-    content: " ";
+    padding: 0 45px;
+    background-image:url(img/background\ section.jpeg);
+    background-size:65%;
 
 }
+h3{
+    font-size:2.3em;
+    padding:10px;
+    color:#000000;
+    font-family: "Righteous", sans-serif;
+    text-align: center;
+}
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-content: space-around;
+    justify-content: center;
+}
+.work{
+    border-radius: 15px;
+    margin: 10px;
+    width:30%;
+    height:33%; 
+    text-align: center;
+}
+.work img{
+    width:100%;
+    max-height: 200px;
+    border: solid 2px #000000;
+    border-radius:15px;
+}
+.work a{
+    font-family: "Righteous", sans-serif;
+    font-weight: 50;
+    font-size: 1em;
+    text-decoration: none;
+    color:darkblue;
+}
+
+
 .footer{
     border-top: solid 10px darkgrey;
     border-bottom: solid 10px darkgrey;
     height: 10%;
+    padding: 0 50px;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -120,30 +126,42 @@ h2::after{
     background-repeat: repeat, repeat, repeat, no-repeat;
     background-position: bottom;
 }
-.social ul{
-    position: relative;
-    list-style: none;
-    margin:0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-wrap:wrap;
+.social{
+    width: 16%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 10px 10px 10px;
+    margin:5px auto;
+    border:solid 2px #000000;
+    border-radius: 15px;
+    text-align: center;
+}
+.social a{
+    color:#ffffff;
+    font-size:1.6em;
+
+}
+.social:hover{
     cursor: pointer;
 }
-
-.social a{
-    color: #ffffff;
-    width:25%;
-    background: rgba(0, 0,0,0.5);
-    border:2px solid black;
-    font-size: 2em;
-    text-decoration: none;
-    margin: 10px 10px;
-    padding: 5px 40px;
-    line-height: 0; 
-    text-align:center;
-    border-radius: 15px;
+.twitter:hover, .twitter:hover a{
+    background-color: #fff;
+    color: #1DA1F2;
+}
+.linkedin:hover,.linkedin:hover a{
+    background-color:#fff;
+    color: #0077B5;
+    
+}
+.github:hover,.github:hover a{
+    background-color:#000000;
+    color:#ffffff;
+}
+.codepen:hover,.codepen:hover a{
+    color:#fff;
+    background-color:#000000;
+}
+.instagram:hover{
+    background: radial-gradient(circle at 10% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
 @media only screen and (max-width:600px){
