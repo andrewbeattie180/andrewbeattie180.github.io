@@ -101,6 +101,7 @@ h3{
     border: solid 2px #000000;
     border-radius:15px;
 }
+
 .work a{
     font-family: "Righteous", sans-serif;
     font-weight: 50;
@@ -139,12 +140,14 @@ h3{
     font-size:1.6em;
 
 }
-.social:hover{
+.social:hover, .work:hover img{
     cursor: pointer;
+    box-shadow: 6px 6px gray;
+    transform: translate(-6px, -6px);
 }
 .twitter:hover, .twitter:hover a{
     background-color: #fff;
-    color: #1DA1F2;
+    color: #1DA1F2;   
 }
 .linkedin:hover,.linkedin:hover a{
     background-color:#fff;
