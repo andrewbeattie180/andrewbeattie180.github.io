@@ -1,47 +1,174 @@
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="main.css" type="text/css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <title>Andrew Beattie GitHub Portfolio</title>
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <title>Andrew Beattie GitHub Portfolio</title>
+</head>
+
 <body>
-    <div class = "intro">
-        <header role="banner">
-        <h1>Andrew Beattie</h1>
-        <h2>Junior Developer at: </h2>
-        </header>
-    </div>
+    <div class='container-fluid'>
+        <div class='row header'>
+            <div class='col-12'>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/cuphead-png-5.png" width="30" height="40" class="d-inline-block align-top" alt="">
+                        Andrew Beattie
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <div class = "section">
-        <h3>Current Project Portfolio</h3>
-
-        <div class = "icons">
-            <div class = "work blockbreak"><a href="https://codepen.io/andrewbeattie180/pen/YJxYXx" target="_blank"><img src="img/Blockbreak.png">JavaScript Block Game<br>A simple JS block breaking game</a></div>
-            <div class = "work cyberpet"><a href="https://codepen.io/andrewbeattie180/pen/JmKzQQ" target="_blank"><img src ="img/pig.jpg">JavaScript CyberPet<br>A Cyberpet with basic attributes</a></div>
-            <div class = "work runway"><a href="https://andrewbeattie180.github.io/CSS-Animations/" target="_blank"><img src="img/runway.png">CSS Basic Animations<br>Basic Keyframes Animations</a></div>
-            <div class = "work fibonacci"><a href="https://codepen.io/andrewbeattie180/pen/yROKXK" target="_blank"><img src="img/fibonacci.png">JavaScript Fibonacci<br>A codepen calculating the Fibonacci Sequence</a></div>
-            <div class = "work primes"><a href="https://codepen.io/andrewbeattie180/pen/bmpPLW" target="_blank"><img src ="img/primes.jpg">JavaScript Prime Numbers<br>A codepen for calculating Prime Numbers</a></div>
-            <div class = "work buttons"><a href="https://andrewbeattie180.github.io/Button-Challenge/" target="_blank"><img src ="img/buttons.png">CSS Button Challenge<br>A demonstration of button animations</a></div>
-            <div class = "work keycodes"><a href="https://andrewbeattie180.github.io/keycode/" target="_blank"><img src ="img/key.svg">Keycodes<br>A JavaScript KeyCode Generator</a></div>
-            <div class = "work drums"><a href="https://andrewbeattie180.github.io/drumkit/" target="_blank"><img src ="img/drums.jpg">JavaScript Drumkit<br>A simple drumkit </a></div>
-            <div class = "work clocks"><a href="https://andrewbeattie180.github.io/TimeTelling/" target="_blank"><img src ="img/clock.png">JavaScript Clocks<br>Analog and Digital Clocks to show JS and DOM learning</a></div>
-            <div class = "work dice"><a href="https://andrewbeattie180.github.io/Dice-Game/" target="_blank"><img src ="img/dice6.png">JavaScript Dice<br>Dice Rolling Game for Two Players</a></div>
-            
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Portfolio
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Interactive Game Controller (WIP)</a>
+                                    <a class="dropdown-item" href="#">Space Invaders Clone</a>
+                                    <a class="dropdown-item" href="#">Dungeon Turn-Based Combat (WIP)</a>
+                                    <a class="dropdown-item" href="#">Fibonacci Codepen</a>
+                                    <a class="dropdown-item" href="#">Prime Numbers Codepen</a>
+                                    <a class="dropdown-item" href="#">CyberPet Codepen</a>
+                                    <a class="dropdown-item" href="#">JavaScript Clock</a>
+                                    <a class="dropdown-item" href="#">JavaScript Dice Game</a>
+                                    <a class="dropdown-item" href="#">JavaScript Drumkit</a>
+                                    <a class="dropdown-item" href="#">JavaScript Clock</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle skills" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Skills
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" >HTML</a>
+                                    <a class="dropdown-item" >CSS and FlexBox</a>
+                                    <a class="dropdown-item" >Bootstrap</a>
+                                    <a class="dropdown-item" >JavaScript</a>
+                                    <a class="dropdown-item" >React</a>
+                                    <a class="dropdown-item" >NodeJs</a>
+                                    <a class="dropdown-item" >Git</a>
+                                    <a class="dropdown-item" >MySQL</a>
+                                    <a class="dropdown-item" >Swift and iOS Development</a>
+                                    <a class="dropdown-item" >MongoDB</a>
+                                    <a class="dropdown-item" >Express</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Links
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="https://codepen.io/andrewbeattie180/" target="_blank">Codepen</a>
+                                    <a class="dropdown-item" href="https://twitter.com/thoughtlessness" target="_blank">Twitter</a>
+                                    <a class="dropdown-item" href="https://uk.linkedin.com/in/andrew-beattie-383b3765"
+                                        target="_blank">LinkedIn</a>
+                                    <a class="dropdown-item" href="https://github.com/andrewbeattie180" target="_blank">Github</a>
+                                    <a class="dropdown-item" href="https://www.instagram.com/pancakes_and_scotch/"
+                                        target="_blank">Instagram</a>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     </div>
-    <div></div>
-    <div class = "footer">
-                <div class ="social codepen"><a href = "https://codepen.io/andrewbeattie180/" target="_blank"><i class="fab fa-codepen"></i></a></div>
-                <div class ="social twitter"><a href = "https://twitter.com/thoughtlessness" target="_blank"><i class ="fab fa-twitter"></i></a></div>
-                <div class ="social linkedin"><a href = "https://uk.linkedin.com/in/andrew-beattie-383b3765" target="_blank"><i class = "fab fa-linkedin"></i></a></div>
-                <div class ="social github"><a href = "https://github.com/andrewbeattie180" target="_blank"><i class="fab fa-github"></i></a></div>
-                <div class ="social instagram"><a href = "https://www.instagram.com/pancakes_and_scotch/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Andrew Beattie</h1>
+          <hr class="my-4">
+          <p class="lead">Junior Developer: - Logical SuperStar, Fast Learner, Creative Problem Solver</p>
+        </div>
+      </div>
+   <div class = "jumbotron jumbotron-fluid jumboexamples">
+       <div class = "container">
+           <div class = "row">
+            <p class = "lead"> Example Work </p>
+            </div>
+       
+       <div class = "row examples">
+           <div class = "col-3"><div class="card">
+               <a href = "https://github.com/andrewbeattie180/Ocarina" target = "blank">
+                <img class="card-img-top" src="./img/iconfinder_videogame_icons-08_611919.png" alt="Nintendo 64 Controller">
+                </a>
+                <div class="card-body">
+                  <p class="card-text">An interactive Nintendo 64 controller, what's the link to time here?</p>
+                </div>
+              </div>
+            </div>
+           <div class = "col-3"><div class="card">
+               <a href="https://github.com/andrewbeattie180/Space-Invaders" target="blank">
+                <img class="card-img-top" src="/img/SpaceInvaders.png" alt="Space Balti" >
+            </a>
+                <div class="card-body">
+                  <p class="card-text">An attempt to build a version of Space Invaders in JavaScript and HTML Canvas. Why Balti? Why not?</p>
+                </div>
+              </div>
+            </div>
+           <div class = "col-3"><div class="card">
+               <a href="https://andrewbeattie180.github.io/drumkit/" target = "blank">
+                <img class="card-img-top" src='./img/drums.jpg' alt="Drumkit">
+            </a>
+                <div class="card-body">
+                  <p class="card-text">An interactive drumkit, expanded on the original coursework as it needed more cowbell</p>
+                </div>
+              </div>
+            </div>
+           <div class = "col-3"><div class="card">
+               <a  href="https://github.com/andrewbeattie180/CN-RPG" target="blank">
+                <img class="card-img-top" src="./img/wyvern.png" alt="Dungeon">
+            </a>
+                <div class="card-body">
+                  <p class="card-text">A turn-based battle system similar to old school RPG systems, using JS and DOM</p>
+                </div>
+              </div>
+            </div>
+       </div>
+       </div>
 
+   </div>
+
+        <div class='row footer'>
+            <div class='col-12'>
+                <nav class="navbar nav-pills nav-justified">
+                    <a class="nav-item nav-link social codepen" href="https://codepen.io/andrewbeattie180/" target="_blank"><i
+                            class="fab fa-codepen"></i></a>
+                    <a class="nav-item nav-link social twitter" href="https://twitter.com/thoughtlessness" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="nav-item nav-link social linkedin" href="https://uk.linkedin.com/in/andrew-beattie-383b3765"
+                        target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="nav-item nav-link social github" href="https://github.com/andrewbeattie180" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                    <a class="nav-item nav-link social instagram" href="https://www.instagram.com/pancakes_and_scotch/"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                </nav>
+            </div>
+        </div>
     </div>
 
-
-   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src ="script.js"></script>
 </body>
+
 </html>
