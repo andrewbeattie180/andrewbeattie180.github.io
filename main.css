@@ -1,159 +1,398 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-*{
-    box-sizing: border-box;
-}
-body{
+body {
     margin: 0;
-    
+    background-color: #008080;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
 }
 
-.container-fluid{
-    min-height: 100%;
-    height:100%;
-    background-color: rgba(255,255,255,0.5);
+.bsod-window {
+    display: none;
+    font-family: 'Lucida Console';
+    height: 100vh;
+    padding: 30px;
+    background-color: #000088;
 }
-.navbar{
-    background: #c2c2c2 50% 0 url(img/pexels-photo-240163.jpeg);
-    background-size: 100%;
-    background-position-y: center;
+
+.desktop {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
 }
-.btn-outline-success{
-    color:black;
-    border-color:black;
-    background-color: rgba(255,255,255,0.5);
+
+.task-bar {
+    background-color: silver;
+    height: 38px;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid #efefef;
+    padding: 3px;
+    width: 100%;
+    color: #000;
 }
-.btn-outline-success:hover{
+
+.start-button {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 25px;
+    font-weight: 700;
+    padding-left: 31px;
+    padding-right: 7px;
+    height: 29px;
+    background-image: url('./images/windows-5.png');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 5px;
+    background-color: silver;
+    border-color: #fff #222 #222 #fff;
+}
+
+.pressed {
+    border-color: #222 #fff #fff #222;
+}
+
+
+.time-dock,
+.start-button {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.time-dock {
+    border-color: #666 #fff #fff #666;
+    float: right;
+    padding: 5px 15px 5px 35px;
+    font-size: 14px;
+    background: url('./images/loudspeaker_wave-1.png');
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 5px;
+}
+
+.folders {
+    height: 500px;
+    width: 100px;
+    position: absolute;
+    padding: 0 10px;
+    top: 0px;
+    left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.folder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.folder-image {
+    width: 40px;
+    height: 40px;
+}
+
+.fab,.fas {
+    font-size: 55px;
+}
+
+.start-menu {
+    padding: 0;
+    vertical-align: middle;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background: #c0c0c0;
+    position: absolute !important;
+    left: 0;
+    bottom: 42px;
+    width: calc(186px + 40px);
+    height: 340px;
+    max-height: calc(100vh - 38px);
+    box-sizing: border-box;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.start-menu-content {
+    overflow: auto;
+}
+
+.start-menu-content:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+}
+
+.start-menu-content ul {
+    margin: 0;
+    top: 0;
+    left: 0;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    padding-inline-start: 0;
+}
+
+.start-menu-list {
+    list-style: none;
+    width: 186px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 19px;
+    padding-left: 40px;
+    padding-bottom: 19px;
+}
+
+.start-menu-list:first-letter {
+    text-decoration: underline;
+}
+
+.start-menu-list:after {
+    content: '▸';
+    position: absolute;
+    left: 200px;
+}
+
+.start-menu-list:nth-child(5):after,
+.start-menu-list:nth-child(6):after {
+    content: '';
+}
+
+.start-menu-list:hover {
+    background-color: #000080;
     color: #fff;
-    background-color: #000000;
-    border-color: #000000;
 }
 
-h1, p{
-    font-family: "Righteous", sans-serif;
+.displayed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.start-menu-icon {
+    width: 25px;
+    position: absolute;
+    left: 10px;
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.window {
+    box-sizing: border-box;
+    border-color: #fff #222 #222 #fff;
+    border-style: solid;
+    border-width: 2px;
+    margin: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    background: silver;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 15px 55px;
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+#computer-window {
+    top: 15px;
+}
+
+#portfolio-window {
+    top: 50px;
+}
+
+#briefcase-window {
+    top: 85px;
+}
+
+.title-bar {
+    position: relative;
+    background: -webkit-linear-gradient(left, #000184, #0f80cd);
+    background: linear-gradient(90deg, #000184, #0f80cd);
+    padding: 4px 6px 5px;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 2px;
     text-align: left;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    overflow: auto;
+    cursor: move;
 }
 
-.navbar{
-    font-family: "Righteous", sans-serif;
-}
-.skills{
-    min-width: 160px;
-}
-.footer, .header{
-    background-color: #c2c2c2;
-}
-.footer{
-    min-width: 100%;
-    bottom:0;
-
-}
-
-.colhead{
-    font-family: "Righteous", sans-serif;
-    font-size: 2em;
-    text-align: center;
-    
-}
-
-.card-text{
-    font-size: 0.7rem;
-    text-align: justify;
-}
-.jumboexamples {
-    height:100%;
-
-}
-.maindiv{
-    min-height:100%;
-}
-.jumbotron{
-padding:1em;
-margin-bottom: 0;
-}
-
-.jumboexamples{
-    height: 75%;
-}
-
-.card-img-top{
-    border: solid 2px #000;
-}
-.jumbotron .row{
-    margin-right:0;
-    margin-left: 0;
-}
-.social{
-    padding: 10px 0;
-    font-size: 1.5em;
-    margin:10px;
-    background-color: rgba(0,0,0,0.5);
-    border:solid 2px #000000;
-    border-radius: 15px;
-    text-align: center;
-    color:#000;
-}
-
-.social:hover, .work:hover img{
+.title-button {
+    color: #000;
+    margin: 1px;
+    box-sizing: border-box;
+    background-color: silver;
+    z-index: 10;
+    float: right;
+    height: 20px;
+    width: 20px;
+    position: relative;
     cursor: pointer;
+    border-color: #fff #222 #222 #fff;
+    border-style: solid;
+    border-width: 2px;
 }
-.twitter:hover{
+
+.title-button-icon {
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 75%;
+}
+
+.title-icon {
+    width: 16px;
+    position: relative;
+    top: 3px;
+}
+
+.window-container {
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0 60px 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.window-main {
+    height: 100%;
+    padding: 5px;
+    color: #000;
+    margin: 10px;
+    overflow-y: scroll;
+    border-color: #666 #fff#fff #666;
+    border-style: solid;
+    border-width: 2px;
     background-color: #fff;
-    color: #1DA1F2;   
-}
-.linkedin:hover{
-    background-color:#fff;
-    color: #0077B5;
-    
-}
-.github:hover{
-    background-color:#000000;
-    color:#ffffff;
-}
-.codepen:hover{
-    color:#fff;
-    background-color:#000000;
-}
-.instagram:hover{
-    color:#fff;
-    background: radial-gradient(circle at 10% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
 }
 
-@media only screen and (max-width:800px){
-    h1{
-        font-size:2.5em;
-    }
-    h1::before{
-        width:0;
-    }
-    h2{
-        font-size: 1.2em;
-    }
-    .examples{
-        display:flex;
-        flex-wrap: wrap;
-    }
-    .col-3{
-        flex:0 0 50%;
-        max-width: 50%;
-    }
+.window-main .folder {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    max-width: 65px;
+    font-size: 13px;
+    text-align: center;
 }
-    
 
-@media only screen and (max-width: 500px){
-    header{
-        background-size: 250%;
-        background-position: top;
-    }
-    h1{
-        font-size:1.2em;
-    }
+.window-main .folder-image {
+    padding: 8px;
+    border-radius: 10px;
+    -webkit-transition: 0.8s ease;
+    transition: 0.8s ease;
+}
 
-    h2{
-        font-size:0.8em;
-    }
-    h2::after{
-        width:50px;
-        height:16px;
-    }
+.folder-image path {
+    fill: #444444;
+}
+
+.instagram:hover {
+    background: -webkit-radial-gradient(10% 107% circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: radial-gradient(circle at 10% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+
+/* Looking to animate the Instagram Hover, as gradients cannot be animated. Idea is to have the button with the gradient load as a 
+before object, and then use opacity to "animate it"  (WIP)*/
+
+.instagram:hover path,
+.twitter:hover path,
+.codepen:hover path,
+.github:hover path {
+    fill: #fff;
+}
+
+.twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.linked-in:hover path {
+    fill: #0077B5;
+}
+
+.linked-in:hover {
+    background-color: #fafafa;
+}
+
+.codepen:hover,
+.github:hover {
+    background-color: #000;
+}
+
+.close>* {
+    pointer-events: none;
+}
+
+.folder-desktop>* {
+    pointer-events: none;
 }

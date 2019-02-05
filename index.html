@@ -3,174 +3,221 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
-    <title>Andrew Beattie GitHub Portfolio</title>
+    <title>Andrew Beattie</title>
 </head>
 
 <body>
-    <div class='container-fluid'>
-        <div class='row header'>
-            <div class='col-12'>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/cuphead-png-5.png" width="30" height="40" class="d-inline-block align-top" alt="">
-                        Andrew Beattie
+    <div id = 'bsod-window' class='bsod-window'></div>
+    <div class='desktop'>
+        <div class='folders'>
+            <div class='folder folder-desktop computer'>
+                <img class='folder-image' src='./images/computer_explorer-4.png'>
+                <p>My Computer</p>
+            </div>
+            <div class='folder folder-desktop portfolio'>
+                <img class='folder-image' src='./images/directory_open_file_mydocs-4.png'>
+                <p>My Portfolio</p>
+            </div>
+            <div class='folder folder-desktop briefcase'>
+                <img class='folder-image' src='./images/briefcase-2.png'>
+                <p>My Briefcase</p>
+            </div>
+            <div class='folder folder-desktop bsod'>
+                <img class='folder-image' src='./images/game_mine_1-0.png'>
+                <p>Do Not Click</p>
+            </div>
+        </div>
+        <div id='computer-window' class='window'>
+            <div id='computer-window-title' class='title-bar'>
+                <img class='title-icon' src='./images/computer_explorer-4.png'>
+                My Computer
+                <button class='title-button close' onclick="closeWindow">
+                    <img class='title-button-icon' src='./images/close-icon.png'>
+                </button>
+                <button class='title-button'>
+                    <img class='title-button-icon' src='./images/question-icon.png'>
+                </button>
+
+            </div>
+            <div class='window-container'>
+                <div class='window-main'>
+                    <a class='folder' href="https://github.com/andrewbeattie180" target="_blank">
+                        <svg class='folder-image github' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                            viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#444444" d="M16,0.4c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2
+                           c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1
+                           c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3
+                           c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5C23.1,6.6,24.4,7,24.4,7
+                           c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4
+                           c0,0.4,0.3,0.9,1.1,0.8C27.4,29.5,32,23.5,32,16.4C32,7.6,24.8,0.4,16,0.4z" />
+                        </svg>
+
+                        <p>GitHub</p>
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <a class='folder' href="https://codepen.io/andrewbeattie180" target="_blank">
+                        <svg class='folder-image codepen' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                            viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                            <path fill="#444444" d="M32,10.9C32,10.9,32,10.9,32,10.9c0-0.1,0-0.1,0-0.2c0,0,0,0,0-0.1c0,0,0-0.1,0-0.1c0,0,0,0,0-0.1
+                           c0,0,0-0.1,0-0.1c0,0,0,0,0-0.1c0,0,0-0.1-0.1-0.1c0,0,0,0,0-0.1c0,0,0-0.1-0.1-0.1c0,0,0,0-0.1-0.1c0,0-0.1,0-0.1-0.1
+                           c0,0,0,0-0.1,0c0,0,0,0,0,0L16.8,0.2c-0.5-0.3-1.1-0.3-1.5,0L0.6,10c0,0,0,0,0,0c0,0,0,0-0.1,0c0,0-0.1,0-0.1,0.1c0,0,0,0-0.1,0.1
+                           c0,0,0,0-0.1,0.1c0,0,0,0,0,0.1c0,0,0,0.1-0.1,0.1c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1
+                           c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1c0,0.1,0,0.1,0,0.2v9.7c0,0.1,0,0.1,0,0.2c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1
+                           c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1c0,0,0,0,0.1,0.1
+                           c0,0,0.1,0,0.1,0.1c0,0,0,0,0.1,0c0,0,0,0,0,0l14.6,9.8c0.2,0.2,0.5,0.2,0.8,0.2c0.3,0,0.5-0.1,0.8-0.2L31.4,22c0,0,0,0,0,0
+                           c0,0,0,0,0.1,0c0,0,0.1,0,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0,0,0.1-0.1c0,0,0,0,0-0.1c0,0,0-0.1,0.1-0.1c0,0,0,0,0-0.1c0,0,0-0.1,0-0.1
+                           c0,0,0,0,0-0.1c0,0,0-0.1,0-0.1c0,0,0,0,0-0.1c0,0,0-0.1,0-0.1c0,0,0,0,0-0.1c0-0.1,0-0.1,0-0.2v-9.7C32,11.1,32,11,32,10.9z
+                            M17.4,3.9l10.8,7.2l-4.8,3.2l-6-4V3.9z M14.6,3.9v6.4l-6,4l-4.8-3.2L14.6,3.9z M2.8,13.7L6.2,16l-3.4,2.3V13.7z M14.6,28.1
+                           L3.9,20.9l4.8-3.2l6,4V28.1z M16,19.3L11.1,16l4.9-3.3l4.9,3.3L16,19.3z M17.4,28.1v-6.4l6-4l4.8,3.2L17.4,28.1z M29.2,18.3L25.8,16
+                           l3.4-2.3V18.3z" />
+                        </svg>
+                        <p>Codepen</p>
+                    </a>
+                    <a class='folder' href="https://twitter.com/thoughtlessness" target="_blank">
+                        <svg class='folder-image twitter' src='./images/social-1_logo-twitter.svg' version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                            <path fill="#444444" d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3
+                          c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5
+                          c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1
+                          c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7
+                          c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z" /></svg>
+                        <p>Twitter</p>
+                    </a>
+                    <a class='folder' href="https://www.instagram.com/pancakes_and_scotch/" target="_blank">
+                        <svg class='folder-image instagram' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
+                            enable-background="new 0 0 32 32" xml:space="preserve">
+                            <path d="M28.2,0H3.8C1.7,0,0,1.7,0,3.8v24.4C0,30.3,1.7,32,3.8,32h24.4c2.1,0,3.8-1.7,3.8-3.8V3.8
+	C32,1.7,30.3,0,28.2,0z M24,4h3c0.6,0,1,0.4,1,1v3c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V5C23,4.4,23.4,4,24,4z M16,9.9
+	c3.4,0,6.2,2.7,6.2,6.1c0,3.4-2.8,6.1-6.2,6.1c-3.4,0-6.2-2.7-6.2-6.1C9.9,12.6,12.6,9.9,16,9.9z M28,29H4c-0.6,0-1-0.4-1-1V13h4
+	                                    c-0.5,0.8-0.7,2.1-0.7,3c0,5.4,4.4,9.7,9.7,9.7c5.4,0,9.7-4.4,9.7-9.7c0-0.9-0.1-2.3-0.8-3h4v15C29,28.6,28.6,29,28,29z" />
+                        </svg>
+                        <p>Instagram</p>
+                    </a>
+                    <a class='folder' href="https://uk.linkedin.com/in/andrew-beattie-383b3765" target="_blank">
+                        <svg class='folder-image linked-in' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
+                            enable-background="new 0 0 32 32" xml:space="preserve">
+                            <path fill="#444444" d="M30.7,0H1.3C0.6,0,0,0.6,0,1.3v29.3C0,31.4,0.6,32,1.3,32h29.3c0.7,0,1.3-0.6,1.3-1.3V1.3
+                               C32,0.6,31.4,0,30.7,0z M9.5,27.3H4.7V12h4.8V27.3z M7.1,9.9c-1.5,0-2.8-1.2-2.8-2.8c0-1.5,1.2-2.8,2.8-2.8c1.5,0,2.8,1.2,2.8,2.8
+                               C9.9,8.7,8.6,9.9,7.1,9.9z M27.3,27.3h-4.7v-7.4c0-1.8,0-4-2.5-4c-2.5,0-2.8,1.9-2.8,3.9v7.6h-4.7V12H17v2.1h0.1
+                               c0.6-1.2,2.2-2.5,4.5-2.5c4.8,0,5.7,3.2,5.7,7.3V27.3z" />
+                        </svg>
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id='portfolio-window' class='window'>
+            <div id='portfolio-window-title' class='title-bar'>
+                <img class='title-icon' src='./images/directory_open_file_mydocs-4.png'>
+                My Portfolio
+                <button class='title-button close'>
+                    <img class='title-button-icon' src='./images/close-icon.png'>
+                </button>
+                <button class='title-button'>
+                    <img class='title-button-icon' src='./images/question-icon.png'>
+                </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Portfolio
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="https://github.com/andrewbeattie180/Coffee-App-React" target ="blank">React Coffee App</a>
-                                    <a class="dropdown-item" href="https://github.com/andrewbeattie180/Open-Air-Quality-API" target ="blank">Open Air Quality API</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/Ocarina/" target ="blank">Interactive Game Controller (WIP)</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/Space-Invaders/" target="blank">Space Invaders Clone</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/CN-RPG/" target = "blank">Dungeon Turn-Based Combat (WIP)</a>
-                                    <a class="dropdown-item" href="https://codepen.io/andrewbeattie180/pen/yROKXK" target = "blank">Fibonacci Codepen</a>
-                                    <a class="dropdown-item" href="https://codepen.io/andrewbeattie180/pen/bmpPLW" target = "blank">Prime Numbers Codepen</a>
-                                    <a class="dropdown-item" href="https://codepen.io/andrewbeattie180/pen/JmKzQQ" target = "blank">CyberPet Codepen</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/TimeTelling/" target = "blank">JavaScript Clock</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/Dice-Game/" target = "blank">JavaScript Dice Game</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/drumkit/" target = "blank">JavaScript Drumkit</a>
-                                    <a class="dropdown-item" href="https://andrewbeattie180.github.io/MemoryGame/" target = "blank">JavaScript Memory Game</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle skills" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Skills
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" >HTML</a>
-                                    <a class="dropdown-item" >CSS and FlexBox</a>
-                                    <a class="dropdown-item" >Bootstrap</a>
-                                    <a class="dropdown-item" >JavaScript</a>
-                                    <a class="dropdown-item" >React</a>
-                                    <a class="dropdown-item" >NodeJs</a>
-                                    <a class="dropdown-item" >Git</a>
-                                    <a class="dropdown-item" >MySQL</a>
-                                    <a class="dropdown-item" >Swift and iOS Development</a>
-                                    <a class="dropdown-item" >MongoDB</a>
-                                    <a class="dropdown-item" >Express</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Links
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="https://codepen.io/andrewbeattie180/" target="_blank">Codepen</a>
-                                    <a class="dropdown-item" href="https://twitter.com/thoughtlessness" target="_blank">Twitter</a>
-                                    <a class="dropdown-item" href="https://uk.linkedin.com/in/andrew-beattie-383b3765"
-                                        target="_blank">LinkedIn</a>
-                                    <a class="dropdown-item" href="https://github.com/andrewbeattie180" target="_blank">Github</a>
-                                    <a class="dropdown-item" href="https://www.instagram.com/pancakes_and_scotch/"
-                                        target="_blank">Instagram</a>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </nav>
+            </div>
+            <div class='window-container'>
+                <div class='window-main'>
+                    <a class='folder' href="https://andrewbeattie180.github.com/Ocarina" target="_blank">
+                        <img class='folder-image' src='./images/1200px-Nintendo_64_Logo.svg.png' alt='N64 logo'>
+                        <p>Interactive Ocarina</p>
+                    </a>
+                    <a class='folder' href="https://andrewbeattie180.github.com/Space-Invaders" target="_blank">
+                        <img class='folder-image' src='./images/space-invaders.svg' alt='space invader icon'>
+                        <p>Space Invaders</p>
+                    </a>
+                    <a class='folder' href="https://andrewbeattie180.github.com/drumkit" target="_blank">
+                        <img class='folder-image' src='./images/drum.svg' alt='drumkit'>
+                        <p>JavaScript Drumkit</p>
+                    </a>
+                    <a class='folder' href="https://github.com/andrewbeattie180/Open-Air-Quality-API" target="_blank">
+                        <img class='folder-image' src='./images/fan.svg' alt='fan icon'>
+                        <p>Air Quality API</p>
+                    </a>
+                    <a class='folder' href="https://codepen.io/andrewbeattie180/pen/yROKXK" target="_blank">
+                        <img class='folder-image' src='./images/spiral.svg' alt='fibonacci icon'>
+                        <p>Fibonacci Solution</p>
+                    </a>
+                    <a class='folder' href="https://github.com/andrewbeattie180/Coffee-App-React" target="_blank">
+                        <img class='folder-image' src='./images/coffee-cup.svg' alt='coffee cup'>
+                        <p>Coffee Order React App</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id='briefcase-window' class='window'>
+            <div id='briefcase-window-title' class='title-bar'>
+                <img class='title-icon' src='./images/briefcase-2.png'>
+                My Briefcase
+                <button class='title-button close' onclick="closeWindow">
+                    <img class='title-button-icon' src='./images/close-icon.png'>
+                </button>
+                <button class='title-button'>
+                    <img class='title-button-icon' src='./images/question-icon.png'>
+                </button>
+
+            </div>
+            <div class='window-container'>
+                <div class='window-main'>
+                    <a class='folder'>
+                        <i class="fab fa-html5" alt='HTML 5 Logo'></i>
+                        <p>HTML 5</p>
+                    </a>
+                    <a class='folder'>
+                        <i class="fab fa-js" alt='JavaScript Logo'></i>
+                        <p>JavaScript</p>
+                    </a>
+                    <a class='folder'>
+                        <i class="fab fa-css3-alt" alt='CSS Logo'></i>
+                        <p>CSS and Flexbox</p>
+                    </a>
+                    <a class='folder'>
+                        <i class="fab fa-react" alt='React JS Logo'></i>
+                        <p>React JS</p>
+                    </a>
+                    <a class='folder'>
+                        <i class="fab fa-node" alt='Node JS Logo'></i>
+                        <p>Node JS</p>
+                    </a>
+                    <a class='folder'>
+                        <i class="fas fa-code-branch" alt='Git Branch Icon'></i>
+                        <p>Git & Source Control</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class='task-bar'>
+            <button class='start-button'>
+                Start
+            </button>
+            <div class='time-dock'></div>
+        </div>
+        <div class='start-menu'>
+            <div class='start-menu-content'>
+                <ul>
+                    <li class='start-menu-list'><img class='start-menu-icon' src='./images/directory_program_group_small.ico'>Programs</li>
+                    <li class='start-menu-list'><img class='start-menu-icon' src='./images/directory_open_file_mydocs-4.png'>Documents</li>
+                    <li class='start-menu-list'><img class='start-menu-icon' src='./images/settings_gear-2.png'>Settings</li>
+                    <li class='start-menu-list'><img class='start-menu-icon' src='./images/search_file_2.ico'>Find</li>
+                    <li class='start-menu-list'><img class='start-menu-icon' src='./images/help_book_small.ico'>Help</li>
+                    <li class='start-menu-list'><img class='start-menu-icon' src='./images/application_hourglass_small.ico'>Run</li>
+
+                </ul>
             </div>
         </div>
     </div>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-3">Andrew Beattie</h1>
-          <hr class="my-4">
-          <p class="lead">Junior Developer: - Logical SuperStar, Fast Learner, Creative Problem Solver</p>
-        </div>
-      </div>
-   <div class = "jumbotron jumbotron-fluid jumboexamples">
-       <div class = "container">
-           <div class = "row">
-            <p class = "lead"> Example Work </p>
-            </div>
-       
-       <div class = "row examples">
-           <div class = "col-3"><div class="card">
-               <a href = "https://github.com/andrewbeattie180/Ocarina" target = "blank">
-                <img class="card-img-top" src="./img/iconfinder_videogame_icons-08_611919.png" alt="Nintendo 64 Controller">
-                </a>
-                <div class="card-body">
-                  <p class="card-text">An interactive Nintendo 64 controller, what's the link to time here? <strong>(WIP)</strong></p>
-                </div>
-              </div>
-            </div>
-           <div class = "col-3"><div class="card">
-               <a href="https://github.com/andrewbeattie180/Space-Invaders" target="blank">
-                <img class="card-img-top" src="/img/SpaceInvaders.png" alt="Space Balti" >
-            </a>
-                <div class="card-body">
-                  <p class="card-text">An attempt to build a version of Space Invaders in JavaScript and HTML Canvas. Why Balti? Why not?</p>
-                </div>
-              </div>
-            </div>
-           <div class = "col-3"><div class="card">
-               <a href="https://andrewbeattie180.github.io/drumkit/" target = "blank">
-                <img class="card-img-top" src='./img/drums.jpg' alt="Drumkit">
-            </a>
-                <div class="card-body">
-                  <p class="card-text">An interactive drumkit, expanded on the original coursework as it needed more cowbell</p>
-                </div>
-              </div>
-            </div>
-           <div class = "col-3"><div class="card">
-               <a  href="https://github.com/andrewbeattie180/Open-Air-Quality-API" target="blank">
-                <img class="card-img-top" src="./img/openairapi.png" alt="Air Quality API">
-            </a>
-                <div class="card-body">
-                  <p class="card-text">A basic API interaction to compare the air quality between two cities</p>
-                </div>
-              </div>
-            </div>
-       </div>
-       </div>
-
-   </div>
-
-        <div class='row footer'>
-            <div class='col-12'>
-                <nav class="navbar nav-pills nav-justified">
-                    <a class="nav-item nav-link social codepen" href="https://codepen.io/andrewbeattie180/" target="_blank"><i
-                            class="fab fa-codepen"></i></a>
-                    <a class="nav-item nav-link social twitter" href="https://twitter.com/thoughtlessness" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="nav-item nav-link social linkedin" href="https://uk.linkedin.com/in/andrew-beattie-383b3765"
-                        target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a class="nav-item nav-link social github" href="https://github.com/andrewbeattie180" target="_blank"><i
-                            class="fab fa-github"></i></a>
-                    <a class="nav-item nav-link social instagram" href="https://www.instagram.com/pancakes_and_scotch/"
-                        target="_blank"><i class="fab fa-instagram"></i></a>
-                </nav>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src ="script.js"></script>
+    <script type='text/javascript' src='./index.js'></script>
 </body>
 
 </html>
