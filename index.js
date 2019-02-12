@@ -36,13 +36,13 @@ const startButtonMouseOut = () => {
     startButton.classList.remove('pressed');
 }
 
-const startMenuMouseOut = (event)=>{
+const startMenuMouseOut = (event) => {
     event.preventDefault();
-    let ancestor = event.target.parentNode.parentNode; //using this for readability. 
+    let ancestor = event.target.parentNode.parentNode; //using this for readability. Slight hack.
 
-    if(event.target !== startMenu && event.target.parentNode !== startMenu){
-        if(ancestor !== startMenu && ancestor.parentNode !== startMenu){
-        startMenu.classList.remove('displayed');
+    if (event.target !== startMenu && event.target.parentNode !== startMenu) {
+        if (ancestor !== startMenu && ancestor.parentNode !== startMenu) {
+            startMenu.classList.remove('displayed');
         }
     }
 }
@@ -60,6 +60,7 @@ const bsodActivate = () => {
 
 const bsodUnmount = () => {
     bsod.style.display = 'none';
+    bsod.innerHTML = '';
     desktop.style.display = 'flex';
 }
 
@@ -68,20 +69,66 @@ const closeWindow = (event) => {
     event.target.parentElement.parentElement.style.display = 'none';
 }
 
-for (let i = 0; i<closeButtons.length;i++){
-    closeButtons[i].addEventListener('click', closeWindow,false);
+for (let i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].addEventListener('click', closeWindow, false);
 }
 
-for (let i = 0;i<folders.length;i++){
-    folders[i].addEventListener('click', openWindow,false);
-    folders[3].addEventListener('click', bsodActivate,false);
+for (let i = 0; i < folders.length; i++) {
+    folders[i].addEventListener('click', openWindow, false);
+    folders[3].addEventListener('click', bsodActivate, false);
 }
 
 
-startButton.addEventListener('mouseout', startButtonMouseOut,false);
-window.addEventListener('mouseup',startMenuMouseOut,false);
-startButton.addEventListener('click',startButtonPressed,false)
-bsod.addEventListener('click', bsodUnmount,false);
+startButton.addEventListener('mouseout', startButtonMouseOut, false);
+window.addEventListener('mouseup', startMenuMouseOut, false);
+startButton.addEventListener('click', startButtonPressed, false)
+bsod.addEventListener('click', bsodUnmount, false);
 
 
 tellTime();
+
+
+
+const dragElement = (elmnt) => {
+    let pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+
+    const closeDragElement = () => {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+    const elementDrag = (event) => {
+        event = event || window.event;
+        event.preventDefault();
+        pos1 = pos3 - event.clientX;
+        pos2 = pos4 - event.clientY;
+        pos3 = event.clientX;
+        pos4 = event.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+    }
+    const dragMouseDown = (event) => {
+        event = event || window.event;
+        event.preventDefault();
+        pos3 = event.clientX;
+        pos4 = event.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
+
+    if (document.getElementById(elmnt.id + "-title")) {
+        document.getElementById(elmnt.id + "-title").onmousedown = dragMouseDown;
+    } else {
+        elmnt.onmousedown = dragMouseDown;
+    }
+
+}
+
+
+const windows = document.querySelectorAll(".window");
+for (let i = 0; i < windows.length; i++) {
+    dragElement(windows[i])
+}
