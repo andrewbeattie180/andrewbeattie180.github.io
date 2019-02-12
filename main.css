@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-*{
+* {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-tap-highlight-color:transparent;
+    -webkit-tap-highlight-color: transparent;
     outline-style: none;
 }
+
 body {
     margin: 0;
     background-color: #008080;
