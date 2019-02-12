@@ -151,7 +151,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 12px;
     background: #c0c0c0;
-    position: absolute !important;
+    position: fixed;
     left: 0;
     bottom: 42px;
     width: calc(186px + 40px);
